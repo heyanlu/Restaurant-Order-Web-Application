@@ -1,10 +1,17 @@
 .address-main-wrapper {
     margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cards-address {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    
 }
 
 .card-address {
@@ -26,6 +33,8 @@
     justify-content: center;
     align-items: center;
 
+    width:20%;
+
     border: 2px dotted rgb(212, 212, 212);
 }
 
@@ -46,3 +55,21 @@
     display: block;
 }
 
+
+@media (max-width: 600px) {
+    .cards-address {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card-address.add {
+        width:auto;
+        height:20%;
+    }
+
+    .card-address {
+        width: 100%;
+        margin-bottom: 10px; 
+    }
+}

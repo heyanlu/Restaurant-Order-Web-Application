@@ -27,13 +27,13 @@ function Orders({ orders, onFetchOrders, info }) {
             {ordersArray.map((item) => (
               <li key={item.id} className="card-order">
                 <div className="order-header-info">
-                  <span className="order-date">
+                  <div className="order-date">
                     {item.orderTime.slice(0, 10)}
-                  </span>
-                  <span className="order-id">Order # {item.id}</span>
-                  <span className="order-amount">${item.amount}</span>
-                  <span className="order-username">{item.username}</span>
-                  <span className="order-type">{item.orderType}</span>
+                  </div>
+                  <div className="order-id">Order # {item.id}</div>
+                  <div className="order-amount">${item.amount}</div>
+                  <div className="order-username">{item.username}</div>
+                  <div className="order-type">{item.orderType}</div>
                   {item.orderType === 'online' && <span className="order-info">{info.address}</span>}
                 </div>
                 <ul className="item-details">

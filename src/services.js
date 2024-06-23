@@ -82,7 +82,7 @@ export function fetchPlaceOrder({ orderItems, orderType }) {
   return chainPromise(fetched);
 }
 
-// Info
+
 export function fetchInfo() {
   const fetched = fetch("/api/v1/info");
   return chainPromise(fetched);

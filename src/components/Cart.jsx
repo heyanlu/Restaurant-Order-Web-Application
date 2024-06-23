@@ -46,6 +46,7 @@ function Cart({ setPage, cart, total, onUpdateCart, onPlaceOrder, info, errorMes
                 <p className="dish-description">{cart[dishId].description}</p>
               </div>
 
+              <div className="price-container">
               <span className="dish-price">{cart[dishId].price}</span>
 
               <div className="quantity-control">
@@ -70,9 +71,12 @@ function Cart({ setPage, cart, total, onUpdateCart, onPlaceOrder, info, errorMes
                   +
                 </button>
               </div>
+              
               <span className="dish-subtotal">{cart[dishId].subtotal}</span>
+              </div>
             </li>
           ))}
+          
 
           {Object.keys(cart).length !== 0 ? (
             <>

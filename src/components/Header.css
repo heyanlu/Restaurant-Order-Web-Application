@@ -30,9 +30,12 @@ header {
     margin: 0;
 }
 
-.home-icon, .account-icon {
-    width: 2rem;
+.home-icon,
+.account-icon {
+    color: white;
+    font-size: 24px;
 }
+
 
 .button-home, .button-search, .button-cart, .button-menu {
     background: none;
@@ -94,6 +97,7 @@ header {
     list-style: none;
     
     background-color: black;
+    left: -1rem;
 }
 
 .menu-list.show {
@@ -105,4 +109,21 @@ header {
 .menu-item:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .logo-title {
+        display: none;
+    }
 }

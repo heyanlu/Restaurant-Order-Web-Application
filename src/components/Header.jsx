@@ -2,10 +2,11 @@ import { useState } from "react";
 
 import { LOGIN_STATUS, CLIENT, SERVER } from "../constants";
 
-import HomeIcon from "../assets/home_FILL0_wght400_GRAD0_opsz24.svg";
-import SearchIcon from "../assets/search_FILL0_wght400_GRAD0_opsz24.svg";
-import AccountIcon from "../assets/account_circle_FILL0_wght400_GRAD0_opsz24.svg";
-import CartIcon from "../assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg";
+// import HomeIcon from "../assets/home_FILL0_wght400_GRAD0_opsz24.svg";
+// import SearchIcon from "../assets/search_FILL0_wght400_GRAD0_opsz24.svg";
+// import AccountIcon from "../assets/account_circle_FILL0_wght400_GRAD0_opsz24.svg";
+// import CartIcon from "../assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg";
+import { FaHome, FaSearch, FaUserCircle, FaShoppingCart, FaBars } from 'react-icons/fa';
 
 import "./Header.css";
 
@@ -52,9 +53,9 @@ function Header({
     <header>
       <div className="logo-container">
         <button className="button-home" onClick={() => setPage("menu")}>
-          <img className="home-icon" src={HomeIcon} alt="homepage" />
+          <FaHome className="home-icon" />
         </button>
-        <h1 className="logo-title">Bonnati</h1>
+        <h1 className="logo-title">Mu</h1>
       </div>
       <div className="search-container">
         <form className="form-search" onSubmit={handleSubmit}>
@@ -65,13 +66,13 @@ function Header({
             onChange={(e) => setQuery(e.target.value)}
           />
           <button className="button-search" type="submit">
-            <img className="search-icon" src={SearchIcon} alt="search" />
+            <FaSearch className="search-icon" />
           </button>
         </form>
       </div>
       <div className="control-container">
         <button className="button-cart" type="button" onClick={handleClickCart}>
-          <img className="cart-icon" src={CartIcon} alt="cart" />
+          <FaShoppingCart className="cart-icon" />
           <span className="cart-count">{cartItems}</span>
         </button>
         <nav className="dropmenu" onMouseLeave={() => setShowMenu(false)}>
@@ -79,11 +80,7 @@ function Header({
             className="button-menu"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <img
-              className="account-icon"
-              src={AccountIcon}
-              alt="control-center"
-            />
+            <FaBars className="account-icon" />
           </button>
 
           <ul className={`menu-list ${showMenu ? "show" : ""}`}>

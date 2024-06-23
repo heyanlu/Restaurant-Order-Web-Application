@@ -84,3 +84,25 @@
     transition: transform 0.1s ease;
     background-color: #ffcc00;
 }
+
+@media (max-width: 600px) {
+    .page-menu-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .page-menu-wrapper {
+      flex-direction: column;
+    }
+  
+}
+    

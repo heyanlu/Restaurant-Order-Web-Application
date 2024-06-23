@@ -16,7 +16,6 @@ function Address({ setPage, info, onFetchInfo }) {
         <div className="cards-address">
           <div className="card-address add" onClick={() => setPage("profile")}>
             <img className="add-icon" src={addIcon} alt="add address" />
-            <span className="add-text">Add Address</span>
           </div>
           <ul className="card-address">
             {info ? (

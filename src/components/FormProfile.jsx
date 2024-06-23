@@ -57,6 +57,7 @@ function FormProfile({ info, setInfo, onCreateInfo, setPage, errorMessage, setEr
               <label htmlFor="email" />
               Email:
               <input
+                id="email"
                 className="email"
                 type="text"
                 name="email"
